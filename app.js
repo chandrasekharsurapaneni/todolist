@@ -38,10 +38,10 @@ const List = mongoose.model("List",listSchema);
 console.log("successfully saved to the data base");
 app.get("/", function(req, res) {
    
-if (defaultItems.length===0) {
-  defaultItems =[item1,item2,item3];
-  Item.insertMany(defaultItems);
-}
+// if (defaultItems.length===0) {
+//   defaultItems =[item1,item2,item3];
+//   Item.insertMany(defaultItems);
+// }
 async function name(){
   const founditems = await Item.find({});// console.log(founditems);
   res.render("list", {listTitle: "Today", newListItems: founditems});
